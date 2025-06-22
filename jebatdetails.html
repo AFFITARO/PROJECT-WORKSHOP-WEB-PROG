@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReGenMarket - CENSEI Details</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: #fff;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 24px;
+      color: #21b24a;
+      letter-spacing: 1.1px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 15px;
+      color: #333;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 8px 0;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background-color: #21b24a;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover {
+      color: #21b24a;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .auth-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .auth-links a {
+      font-weight: 600;
+      font-size: 14px;
+      color: #21b24a;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .auth-links a:hover {
+      background-color: #21b24a;
+      color: #fff;
+    }
+
+    .sign-up-btn {
+      background-color: #21b24a;
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 22px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(33,178,74,0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sign-up-btn:hover {
+      background-color: #1a8a36;
+      box-shadow: 0 6px 15px rgba(26,138,54,0.6);
+    }
+
+    /* Card Section */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #97ea9e;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .card h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .hours {
+      list-style: none;
+      background-color: #f1f8e9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .hours li {
+      margin-bottom: 0.5rem;
+    }
+
+    .utem-link {
+      color: #1e88e5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .utem-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Map styling */
+    .map-container {
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 15px 25px;
+      }
+      .nav-links {
+        gap: 25px;
+      }
+      .auth-links {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <nav>
+    <div class="logo">ReGenMarket</div>
+    <div class="nav-links">
+      <a href="page1.php">Home</a>
+      <a href="page2.php">Recycle</a>
+      <a href="page4.html">Location</a>
+      <a href="profile.php">Account</a>
+      <a href="cart.php">🛒 Cart</a>
+
+    </div>
+    <div class="auth-links">
+      <a href="mainpage.php">Log Out</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Info Card -->
+    <div class="card">
+      <h2>JEBAT Details</h2>
+      <ul class="hours">
+        <li>Monday, 8AM–5PM</li>
+        <li>Tuesday, 8AM–5PM</li>
+        <li>Wednesday, 8AM–5PM</li>
+        <li>Thursday, 8AM–5PM</li>
+        <li>Friday, 8AM–5PM</li>
+        <li>Saturday, Closed</li>
+        <li>Sunday, Closed</li>
+      </ul>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed/v1/place?q=kolej+jebat&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
