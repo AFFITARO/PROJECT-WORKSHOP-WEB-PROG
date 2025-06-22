@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ReGenMarket Stylish Navbar</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.5;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /* Logo styling */
+  .logo {
+    font-weight: 900;
+    font-size: 28px;
+    color: #21b24a;
+    letter-spacing: 1.3px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+  }
+
+  /* Navigation menu */
+  .nav-links {
+    display: flex;
+    gap: 48px;
+  }
+
+  .nav-links a {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  /* Underline effect on hover */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #21b24a, #1a8a36);
+    transition: width 0.35s ease;
+    border-radius: 3px;
+  }
+
+  .nav-links a:hover {
+    color: #21b24a;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Auth links container */
+  .auth-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .auth-links a {
+    font-weight: 600;
+    font-size: 14px;
+    color: #21b24a;
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 6px;
+    transition: background-color 0.35s ease, color 0.35s ease;
+    user-select: none;
+  }
+
+  .auth-links a:hover {
+    background-color: #21b24a;
+    color: #fff;
+  }
+
+  .sign-up-btn {
+    background: linear-gradient(135deg, #21b24a, #1a8a36);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(33,178,74,0.5);
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+    user-select: none;
+  }
+
+  .sign-up-btn:hover {
+    background: linear-gradient(135deg, #1a8a36, #147127);
+    box-shadow: 0 8px 25px rgba(20,113,39,0.7);
+    transform: translateY(-2px);
+  }
+
+  /* Main container */
+  .container {
+    max-width: 960px;
+    margin: 40px auto 60px;
+    padding: 0 24px;
+  }
+
+  /* Hero section */
+  .hero {
+    background: linear-gradient(135deg, #a4d98f, #88c978);
+    padding: 200px 30px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .hero h1 {
+    font-weight: 800;
+    font-size: 26px;
+    color: #0b3e0b;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    line-height: 1.2;
+  }
+
+  /* Location cards */
+  .location-card {
+    background-color: #b4e0a3;
+    padding: 22px 36px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.09);
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+  }
+  .location-card:hover {
+    background-color: #9fda8a;
+    box-shadow: 0 10px 40px rgba(20, 120, 20, 0.2);
+    transform: translateY(-3px);
+  }
+
+  .location-name {
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.6px;
+    color: #144d14;
+    text-transform: uppercase;
+  }
+
+  /* Details button */
+  .details-btn {
+    background: linear-gradient(135deg, #21b24a, #1a8a36);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 18px rgba(33,178,74,0.5);
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+    user-select: none;
+    text-decoration: none;
+  }
+
+  .details-btn:hover {
+    background: linear-gradient(135deg, #1a8a36, #147127);
+    box-shadow: 0 8px 25px rgba(20,113,39,0.7);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      padding: 15px 30px;
+    }
+    .nav-links {
+      gap: 28px;
+    }
+    .auth-links {
+      gap: 20px;
+    }
+    .container {
+      margin: 30px auto 50px;
+      padding: 0 16px;
+    }
+    .hero {
+      padding: 44px 20px;
+      font-size: 18px;
+    }
+    .hero h1 {
+      font-size: 22px;
+    }
+    .location-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 24px;
+    }
+    .details-btn {
+      align-self: stretch;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ReGenMarket</div>
+  <div class="nav-links">
+    <a href="page1.php">HOME</a>
+    <a href="page2.php">RECYCLE</a>
+    <a href="page4.html">LOCATION</a>
+    <a href="profile.php">ACCOUNT</a>
+    <a href="cart.php">🛒 Cart</a>
+
+  </div>
+  <div class="auth-links">
+    <a href="mainpage.php">Log Out</a>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+    <h1>Find your nearest recycling center by selecting your recyclable items below</h1>
+  </section>
+
+  <section class="locations">
+    <div class="location-card" tabindex="0">
+      <div class="location-name">Censei Utem</div>
+      <a class="details-btn" href="detailcensei.html" aria-label="Details for Censei Utem">Details</a>
+    </div>
+    <div class="location-card" tabindex="0">
+      <div class="location-name">Kolej Jebat</div>
+      <a class="details-btn" href="jebatdetails.html" aria-label="Details for Kolej Jebat">Details</a>
+    </div>
+    <div class="location-card" tabindex="0">
+      <div class="location-name">FTMK</div>
+      <a class="details-btn" href="ftmkdetails.html" aria-label="Details for FTMK">Details</a>
+    </div>
+
+  </section>
+</div>
+
+</body>
+</html>

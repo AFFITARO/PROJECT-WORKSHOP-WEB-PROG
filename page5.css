@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.auth-buttons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.auth-buttons .sign-in,
+.auth-buttons .sign-up {
+    padding: 8px 16px;
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.auth-buttons .sign-up {
+    background-color: #28a745;
+}
+
+/* Account Section */
+main {
+    padding: 40px;
+}
+
+.account-info {
+    background-color: #28a745;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-icon {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.user-details p {
+    margin: 0;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.user-id {
+    color: white;
+}
+
+/* Account Menu */
+.account-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #e2f7e2;
+    border-radius: 10px;
+}
+
+.account-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.account-menu li:last-child {
+    border-bottom: none;
+}
+
+.account-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
